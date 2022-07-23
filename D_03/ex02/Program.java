@@ -36,9 +36,9 @@ public class Program {
         }
         System.out.println("Sum: " + newSize);
 
-        for (int i = 0; i < sizeArr; i++) {
-            System.out.println(listInt.get(i));
-        }
+//        for (int i = 0; i < sizeArr; i++) {
+//            System.out.println(listInt.get(i));
+//        }
 
         for (int i = 0; i < amountThr; i++) {
             if (calculator.getTail() == 0)
@@ -48,14 +48,16 @@ public class Program {
             }
             else {
                 if (i == amountThr - 1) {
-                    threads[i] = new MyThread(first, calculator.getElementsTail());
+                    threads[i] = new MyThread(first, first + calculator.getElementsTail());
                 }
-                int k = first + calculator.getElementsGaps();
-                if (k > sizeArr) {
-                    k = sizeArr;
+//                int k = first + calculator.getElementsGaps();
+//                if (k > sizeArr) {
+//                    k = sizeArr;
+//                }
+                else {
+                    threads[i] = new MyThread(first, first + calculator.getElementsGaps());
+                    first += calculator.getElementsGaps();
                 }
-                threads[i] = new MyThread(first, k);
-                first += calculator.getElementsGaps();
             }
             threads[i].start();
             try {

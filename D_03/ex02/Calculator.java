@@ -26,9 +26,9 @@ public class Calculator {
             tail = 1;
             elementsTail = sizeArr - elementsGaps * (countThread - 1);
         }
-        System.out.println("countTread = "+countThread+" sizeArr = "+sizeArr);
-        System.out.println("gaps = "+countGaps+" elementsGaps = "+elementsGaps);
-        System.out.println("tail = "+tail+" elementsTail = "+ elementsTail);
+//        System.out.println("countTread = "+countThread+" sizeArr = "+sizeArr);
+//        System.out.println("gaps = "+countGaps+" elementsGaps = "+elementsGaps);
+//        System.out.println("tail = "+tail+" elementsTail = "+ elementsTail);
     }
 
     public int getSizeArr() {
